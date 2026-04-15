@@ -1,7 +1,7 @@
 app_name = "frappe_monitor"
-app_title = "frappe_monitor"
+app_title = "Frappe Monitor"
 app_publisher = "Amit Kumar"
-app_description = "Frappe server process manager"
+app_description = "Advanced system monitoring and alerting for Frappe/ERPNext"
 app_email = "hello@amitkumar.live"
 app_license = "mit"
 
@@ -148,23 +148,23 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"frappe_monitor.tasks.all"
-# 	],
-# 	"daily": [
-# 		"frappe_monitor.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"frappe_monitor.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"frappe_monitor.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"frappe_monitor.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"cron": {
+		"*/1 * * * *": [  # Every minute
+			"frappe_monitor.services.alert_engine.check_alerts"
+		]
+	},
+	"all": [
+		"frappe_monitor.services.collector.collect_and_store_metrics"
+	],
+	"daily": [
+		"frappe_monitor.services.aggregator.aggregate_daily_metrics",
+		"frappe_monitor.services.storage.cleanup_old_metrics"
+	],
+	"hourly": [
+		"frappe_monitor.services.aggregator.aggregate_hourly_metrics"
+	]
+}
 
 # Testing
 # -------

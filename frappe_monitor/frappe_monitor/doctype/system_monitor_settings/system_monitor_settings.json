@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "creation": "2024-04-15 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "monitoring_section",
+  "monitoring_interval",
+  "data_retention_days",
+  "column_break_3",
+  "enable_real_time_updates",
+  "update_interval",
+  "alert_section",
+  "cpu_threshold",
+  "memory_threshold",
+  "disk_threshold",
+  "column_break_9",
+  "enable_email_alerts",
+  "enable_system_notifications",
+  "notification_section",
+  "webhook_url",
+  "default_recipients"
+ ],
+ "fields": [
+  {
+   "fieldname": "monitoring_section",
+   "fieldtype": "Section Break",
+   "label": "Monitoring Settings"
+  },
+  {
+   "default": "30",
+   "fieldname": "monitoring_interval",
+   "fieldtype": "Int",
+   "label": "Monitoring Interval (seconds)",
+   "description": "How often to collect system metrics"
+  },
+  {
+   "default": "30",
+   "fieldname": "data_retention_days",
+   "fieldtype": "Int",
+   "label": "Data Retention (days)",
+   "description": "How long to keep historical metrics data"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_real_time_updates",
+   "fieldtype": "Check",
+   "label": "Enable Real-time Updates"
+  },
+  {
+   "default": "30",
+   "depends_on": "enable_real_time_updates",
+   "fieldname": "update_interval",
+   "fieldtype": "Int",
+   "label": "Update Interval (seconds)"
+  },
+  {
+   "fieldname": "alert_section",
+   "fieldtype": "Section Break",
+   "label": "Default Alert Thresholds"
+  },
+  {
+   "default": "80",
+   "fieldname": "cpu_threshold",
+   "fieldtype": "Float",
+   "label": "CPU Threshold (%)"
+  },
+  {
+   "default": "85",
+   "fieldname": "memory_threshold",
+   "fieldtype": "Float",
+   "label": "Memory Threshold (%)"
+  },
+  {
+   "default": "90",
+   "fieldname": "disk_threshold",
+   "fieldtype": "Float",
+   "label": "Disk Threshold (%)"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_email_alerts",
+   "fieldtype": "Check",
+   "label": "Enable Email Alerts"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_system_notifications",
+   "fieldtype": "Check",
+   "label": "Enable System Notifications"
+  },
+  {
+   "fieldname": "notification_section",
+   "fieldtype": "Section Break",
+   "label": "Notification Settings"
+  },
+  {
+   "fieldname": "webhook_url",
+   "fieldtype": "Data",
+   "label": "Webhook URL",
+   "description": "URL for webhook notifications (Slack, Discord, etc.)"
+  },
+  {
+   "fieldname": "default_recipients",
+   "fieldtype": "Small Text",
+   "label": "Default Alert Recipients",
+   "description": "Comma-separated email addresses"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-04-15 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Frappe Monitor",
+ "name": "System Monitor Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

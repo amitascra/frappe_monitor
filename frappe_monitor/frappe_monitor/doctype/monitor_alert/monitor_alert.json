@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "autoname": "field:alert_name",
+ "creation": "2024-04-15 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "alert_name",
+  "status",
+  "metric_section",
+  "metric_type",
+  "metric_name",
+  "column_break_5",
+  "threshold_type",
+  "threshold_value",
+  "notification_section",
+  "alert_frequency",
+  "notification_channels",
+  "column_break_10",
+  "recipients"
+ ],
+ "fields": [
+  {
+   "fieldname": "alert_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Alert Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive",
+   "reqd": 1
+  },
+  {
+   "fieldname": "metric_section",
+   "fieldtype": "Section Break",
+   "label": "Metric Configuration"
+  },
+  {
+   "fieldname": "metric_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Metric Type",
+   "options": "CPU\nMemory\nDisk\nNetwork",
+   "reqd": 1
+  },
+  {
+   "fieldname": "metric_name",
+   "fieldtype": "Select",
+   "label": "Metric Name",
+   "options": "percent\nload_average_1\nload_average_5\nload_average_15\nused_bytes\nswap_percent\nbytes_sent\nbytes_recv\nconnections_count",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "threshold_type",
+   "fieldtype": "Select",
+   "label": "Threshold Type",
+   "options": "Above\nBelow",
+   "reqd": 1
+  },
+  {
+   "fieldname": "threshold_value",
+   "fieldtype": "Float",
+   "label": "Threshold Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notification_section",
+   "fieldtype": "Section Break",
+   "label": "Notification Settings"
+  },
+  {
+   "default": "Repeated",
+   "fieldname": "alert_frequency",
+   "fieldtype": "Select",
+   "label": "Alert Frequency",
+   "options": "Once\nRepeated"
+  },
+  {
+   "default": "Email,System Notification",
+   "fieldname": "notification_channels",
+   "fieldtype": "Data",
+   "label": "Notification Channels",
+   "description": "Comma-separated: Email, System Notification, Webhook"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recipients",
+   "fieldtype": "Small Text",
+   "label": "Recipients",
+   "description": "Comma-separated email addresses or usernames"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-15 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Frappe Monitor",
+ "name": "Monitor Alert",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

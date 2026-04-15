@@ -1,0 +1,456 @@
+/* Modern System Monitor Dashboard Styles */
+
+.system-monitor-page {
+	padding: 25px;
+	background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+	min-height: 100vh;
+}
+
+.system-monitor-page .row {
+	margin-bottom: 25px;
+}
+
+/* Modern Card Styling with Glass Morphism */
+.info-card, .gauge-card, .chart-card, .processes-card, .insights-card, .network-card, .health-score-card, .quick-actions-card {
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	border-radius: 16px;
+	padding: 30px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-card:hover, .gauge-card:hover, .chart-card:hover, .processes-card:hover, .insights-card:hover, .network-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* Health Score Card - Premium Gradient */
+.health-score-card {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+.health-score-card::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	right: -50%;
+	width: 200%;
+	height: 200%;
+	background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+	animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+	0%, 100% { transform: scale(1); opacity: 0.5; }
+	50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.health-score-content {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+	position: relative;
+	z-index: 1;
+}
+
+.health-icon {
+	font-size: 72px;
+	animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+}
+
+.health-details h3 {
+	margin: 0 0 12px 0;
+	font-size: 22px;
+	font-weight: 600;
+	opacity: 0.95;
+}
+
+.health-score-value {
+	font-size: 56px;
+	font-weight: 800;
+	margin-bottom: 12px;
+	text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.health-status .badge {
+	font-size: 15px;
+	padding: 8px 16px;
+	border-radius: 20px;
+	font-weight: 600;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Quick Actions - Modern Button Design */
+.quick-actions-card {
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	border: 2px solid rgba(102, 126, 234, 0.1);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.quick-actions-card .section-title {
+	margin-bottom: 20px;
+}
+
+.action-buttons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 12px;
+	flex: 1;
+	align-content: start;
+}
+
+.action-buttons .btn {
+	padding: 12px 16px;
+	border-radius: 12px;
+	font-weight: 600;
+	font-size: 13px;
+	transition: all 0.3s ease;
+	border: none;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+	white-space: nowrap;
+}
+
+.action-buttons .btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.action-buttons .btn i {
+	margin-right: 6px;
+}
+
+/* Section Titles - Modern Typography */
+.section-title {
+	font-size: 20px;
+	font-weight: 700;
+	color: #2c3e50;
+	margin-bottom: 24px;
+	padding-bottom: 12px;
+	border-bottom: 3px solid #667eea;
+	position: relative;
+}
+
+.section-title::after {
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	width: 60px;
+	height: 3px;
+	background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+	border-radius: 2px;
+}
+
+/* System Info Table - Modern Design */
+.info-card table {
+	width: 100%;
+	font-size: 15px;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.info-card table th {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	font-weight: 600;
+	padding: 16px 24px;
+	text-align: left;
+	width: 220px;
+	border: none;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.info-card table td {
+	background-color: #f8f9fa;
+	padding: 16px 24px;
+	color: #2c3e50;
+	border: none;
+	border-bottom: 1px solid #e9ecef;
+	font-weight: 500;
+}
+
+.info-card table tr:last-child td {
+	border-bottom: none;
+}
+
+.info-card table tr:hover td {
+	background-color: #e9ecef;
+	transition: background-color 0.2s ease;
+}
+
+/* Gauge Charts - Enhanced Container */
+#chart_div {
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.gauge-card {
+	background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+	border: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+/* Network Statistics - Modern Grid */
+.network-card {
+	background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.network-stats {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 15px;
+	flex: 1;
+}
+
+.stat-item {
+	text-align: center;
+	padding: 20px;
+	background: white;
+	border-radius: 12px;
+	border-left: 4px solid #667eea;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+	border-left-color: #764ba2;
+}
+
+.stat-label {
+	font-size: 12px;
+	color: #6c757d;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	margin-bottom: 10px;
+}
+
+.stat-value {
+	font-size: 28px;
+	font-weight: 800;
+	color: #2c3e50;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/* Performance Insights - Modern Alert Design */
+.insights-card {
+	background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+}
+
+.insight-item {
+	display: flex;
+	align-items: start;
+	gap: 18px;
+	padding: 20px;
+	margin-bottom: 16px;
+	border-radius: 12px;
+	animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.insight-item.insight-warning {
+	background: linear-gradient(135deg, #fff3cd 0%, #fffbeb 100%);
+	border-left: 5px solid #ffc107;
+}
+
+.insight-item.insight-critical {
+	background: linear-gradient(135deg, #f8d7da 0%, #fff5f5 100%);
+	border-left: 5px solid #dc3545;
+}
+
+.insight-icon {
+	font-size: 28px;
+	margin-top: 2px;
+}
+
+.insight-item.insight-warning .insight-icon {
+	color: #ffc107;
+	filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.3));
+}
+
+.insight-item.insight-critical .insight-icon {
+	color: #dc3545;
+	filter: drop-shadow(0 2px 4px rgba(220, 53, 69, 0.3));
+}
+
+.insight-content {
+	flex: 1;
+}
+
+.insight-content strong {
+	color: #2c3e50;
+	font-weight: 700;
+}
+
+.insight-recommendation {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #6c757d;
+	font-style: italic;
+	padding: 8px 12px;
+	background: rgba(255,255,255,0.5);
+	border-radius: 8px;
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* Process Tables - Modern Design */
+.processes-card {
+	background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.processes-card table {
+	font-size: 14px;
+	margin-bottom: 0;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.processes-card thead th {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	font-weight: 600;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	padding: 14px 12px;
+}
+
+.processes-card tbody tr {
+	transition: background-color 0.2s ease;
+}
+
+.processes-card tbody tr:hover {
+	background-color: #f0f4ff;
+}
+
+.processes-card tbody td {
+	padding: 12px;
+	border-bottom: 1px solid #e9ecef;
+}
+
+/* CPU Frequency Chart */
+#cpu_frequency_div {
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.chart-card {
+	background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* Loading State - Modern Spinner */
+.loading-state {
+	text-align: center;
+	padding: 50px;
+	color: #6c757d;
+	font-size: 16px;
+}
+
+.loading-state i {
+	font-size: 40px;
+	margin-bottom: 15px;
+	color: #667eea;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design - Mobile Optimization */
+@media (max-width: 768px) {
+	.system-monitor-page {
+		padding: 15px;
+	}
+	
+	.info-card, .gauge-card, .chart-card, .processes-card, .insights-card, .network-card, .health-score-card, .quick-actions-card {
+		padding: 20px;
+		border-radius: 12px;
+	}
+	
+	.section-title {
+		font-size: 18px;
+	}
+	
+	.health-score-content {
+		flex-direction: column;
+		text-align: center;
+		gap: 20px;
+	}
+	
+	.health-icon {
+		font-size: 56px;
+	}
+	
+	.health-score-value {
+		font-size: 42px;
+	}
+	
+	.network-stats {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	.action-buttons {
+		flex-direction: column;
+	}
+	
+	.action-buttons .btn {
+		width: 100%;
+		min-width: auto;
+	}
+	
+	.processes-card table {
+		font-size: 12px;
+	}
+	
+	.stat-value {
+		font-size: 24px;
+	}
+}
+
+/* Smooth Transitions */
+* {
+	transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}

@@ -1,0 +1,69 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-04-15 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "alert",
+  "metric_value",
+  "status",
+  "timestamp"
+ ],
+ "fields": [
+  {
+   "fieldname": "alert",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Alert",
+   "options": "Monitor Alert",
+   "reqd": 1
+  },
+  {
+   "fieldname": "metric_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Metric Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Triggered\nResolved",
+   "reqd": 1
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-15 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Frappe Monitor",
+ "name": "Alert Log",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

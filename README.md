@@ -1,15 +1,23 @@
-### frappe_monitor
+### Frappe Monitor
 
-Frappe server process manager
+Advanced system monitoring and alerting for Frappe/ERPNext
+
+### Features
+
+- **Real-time System Metrics**: Monitor CPU, Memory, Disk, and Network usage in real-time
+- **Historical Data**: Track metrics over time with configurable retention periods
+- **Smart Alerting**: Set threshold-based alerts with email and in-app notifications
+- **Process Management**: View and manage running processes
+- **Performance Insights**: Get AI-powered recommendations for system optimization
+- **Beautiful Dashboard**: Modern, responsive UI with live updates
+- **Socket.IO Integration**: Real-time metric streaming to connected clients
 
 ### Installation
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
-
 ```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app frappe_monitor
+# Get the app
+cd frappe-bench
+bench get-app https://github.com/yourusername/frappe_monitor
 ```
 
 ### Contributing

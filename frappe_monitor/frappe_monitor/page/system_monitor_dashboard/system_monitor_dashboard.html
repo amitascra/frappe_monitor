@@ -1,0 +1,114 @@
+<!-- jinja -->
+<div class="system-monitor-page">
+	<!-- Health Score and Quick Actions Row -->
+	<div class="row">
+		<!-- Health Score Section -->
+		<div class="col-md-6">
+			<div class="health-score-card">
+				<div class="health-score-content">
+					<div class="health-icon">
+						<i class="fa fa-check-circle" id="health-icon"></i>
+					</div>
+					<div class="health-details">
+						<h3>System Health Score</h3>
+						<div class="health-score-value" id="health-score">100/100</div>
+						<div class="health-status">
+							<span class="badge badge-success" id="health-badge">Excellent</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Quick Actions Panel -->
+		<div class="col-md-6">
+			<div class="quick-actions-card">
+				<h4 class="section-title">Quick Actions</h4>
+				<div class="action-buttons">
+					<button class="btn btn-sm btn-primary" id="refresh-btn">
+						<i class="fa fa-refresh"></i> Refresh Data
+					</button>
+					<button class="btn btn-sm btn-warning" id="test-socketio-btn">
+						<i class="fa fa-bolt"></i> Test Socket.IO
+					</button>
+					<button class="btn btn-sm btn-success" id="alerts-btn">
+						<i class="fa fa-bell"></i> Manage Alerts
+					</button>
+					<button class="btn btn-sm btn-info" id="settings-btn">
+						<i class="fa fa-cog"></i> Settings
+					</button>
+					<button class="btn btn-sm btn-secondary" id="clear-cache-btn">
+						<i class="fa fa-trash"></i> Clear Cache
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- System Info and Network Stats Row -->
+	<div class="row">
+		<!-- System Info Section -->
+		<div class="col-md-6">
+			<div class="info-card">
+				<h4 class="section-title">System Information</h4>
+				<div id="system-info-table"></div>
+			</div>
+		</div>
+
+		<!-- Network Statistics Section -->
+		<div class="col-md-6">
+			<div class="network-card">
+				<h4 class="section-title">Network Statistics</h4>
+				<div class="network-stats" id="network-stats"></div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Gauge Charts Section -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="gauge-card">
+				<h4 class="section-title">Resource Usage</h4>
+				<div id="chart_div" style="height: 280px;"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Performance Insights Section -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="insights-card">
+				<h4 class="section-title">Performance Insights</h4>
+				<div id="insights-container">
+					<p class="text-muted">Loading insights...</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Top Processes Section -->
+	<div class="row">
+		<div class="col-md-6">
+			<div class="processes-card">
+				<h4 class="section-title">Top Processes by CPU</h4>
+				<div id="top-cpu-processes"></div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="processes-card">
+				<h4 class="section-title">Top Processes by Memory</h4>
+				<div id="top-memory-processes"></div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- CPU Frequency Chart Section -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="chart-card">
+				<h4 class="section-title">CPU Usage per Core</h4>
+				<div id="cpu_frequency_div" style="height: 400px;"></div>
+			</div>
+		</div>
+	</div>
+</div>
