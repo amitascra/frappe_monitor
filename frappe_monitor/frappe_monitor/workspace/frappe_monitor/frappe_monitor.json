@@ -1,0 +1,143 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"shortcuts_header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"shortcut_1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"System Monitor Dashboard\",\"col\":3}},{\"id\":\"shortcut_2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"System Monitor Settings\",\"col\":3}},{\"id\":\"shortcut_3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Monitor Alert\",\"col\":3}},{\"id\":\"spacer_1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"cards_header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Modules</b></span>\",\"col\":12}}]",
+ "creation": "2026-04-15 15:16:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "chart-line",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Frappe Monitor",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Monitoring",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "System Monitor Dashboard",
+   "link_count": 0,
+   "link_to": "system-monitor-dashboard",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "System Metric Log",
+   "link_count": 0,
+   "link_to": "System Metric Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Alerts",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Monitor Alert",
+   "link_count": 0,
+   "link_to": "Monitor Alert",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Monitor Alert",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Alert Log",
+   "link_count": 0,
+   "link_to": "Alert Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Configuration",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "System Monitor Settings",
+   "link_count": 0,
+   "link_to": "System Monitor Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-04-15 15:16:00.000000",
+ "modified_by": "Administrator",
+ "module": "Frappe Monitor",
+ "name": "Frappe Monitor",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 11,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "label": "System Monitor Dashboard",
+   "link_to": "system-monitor-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Blue",
+   "format": "{} Metrics",
+   "label": "System Metric Log",
+   "link_to": "System Metric Log",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "format": "{} Alerts",
+   "label": "Monitor Alert",
+   "link_to": "Monitor Alert",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "format": "{} Logs",
+   "label": "Alert Log",
+   "link_to": "Alert Log",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "label": "System Monitor Settings",
+   "link_to": "System Monitor Settings",
+   "type": "DocType"
+  }
+ ],
+ "title": "Frappe Monitor"
+}
